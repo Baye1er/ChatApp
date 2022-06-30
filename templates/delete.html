@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Profile</title>
+</head>
+<body>
+<div class="container-delete">
+    <h1>Delete Profile</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <p id="delete">Are you sure you want to delete "{{ object.user.username }}"?</p>
+    <input type="submit" value="Confirm" id="input">
+    </form>
+    {% endblock %}
+    </div>
+</body>
+</html>

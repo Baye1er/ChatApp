@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Page</title>
+</head>
+<body>
+<div class="container-profile-page">
+    <h1>Welcome to your personal space !</h1>
+    <div class="btns">
+        <div class="new-relative">
+              <a href="{% url 'create_relatives' %}">+ New Relative</a>
+        </div>
+         <div class="spaces">
+              <a href="{% url 'spaces' %}">Spaces</a>
+        </div>
+    </div>
+    <!--relatives-->
+    <div class="family-tree">
+        <div class="mother">
+            <div class="card border-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header">Link : {{mother.link}}</div>
+                <div class="card-body">
+                    <h5 class="card-title">First Name : {{mother.first_name }}</h5>
+                    <p class="card-text">Last Name : {{mother.last_name }}</p>
+                    <p class="card-text">Phone : {{mother.phone }}</p>
+                    <p class="card-text">Email : {{mother.email }}</p>
+                    <p class="card-text">Phone : {{mother.address }}</p>
+                    <p class="card-text">Profession : {{mother.profession }}</p>
+                    <p class="card-text">Age : {{mother.age }}</p>
+                    <p class="card-text">Sex : {{mother.sex }}</p>
+                </div>
+                <div class="card-footer bg-transparent border-dark">
+                </div>
+            </div>
+        </div>
+        <div class="sister">
+             <div class="card border-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header">Link : {{sister.link}}</div>
+                <div class="card-body">
+                    <h5 class="card-title">First Name : {{sister.first_name }}</h5>
+                    <p class="card-text">Last Name : {{sister.last_name }}</p>
+                    <p class="card-text">Phone : {{sister.phone }}</p>
+                    <p class="card-text">Email : {{sister.email }}</p>
+                    <p class="card-text">Phone : {{sister.address }}</p>
+                    <p class="card-text">Profession : {{sister.profession }}</p>
+                    <p class="card-text">Age : {{sister.age }}</p>
+                    <p class="card-text">Sex : {{sister.sex }}</p>
+                </div>
+                <div class="card-footer bg-transparent border-dark">
+                </div>
+            </div>
+        </div>
+        <div class="me">
+            <div class="card border-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header">Me</div>
+                    <div class="card-body">
+                        The current User
+                    </div>
+                    <div class="card-footer bg-transparent border-dark">
+                </div>
+            </div>
+        </div>
+        <div class="brother">
+        <div class="card border-dark mb-3" style="max-width: 18rem;">
+            <div class="card-header">Link : {{brother.link}}</div>
+                <div class="card-body">
+                    <h5 class="card-title">First Name : {{brother.first_name }}</h5>
+                    <p class="card-text">Last Name : {{brother.last_name }}</p>
+                    <p class="card-text">Phone : {{brother.phone }}</p>
+                    <p class="card-text">Email : {{brother.email }}</p>
+                    <p class="card-text">Phone : {{brother.address }}</p>
+                    <p class="card-text">Profession : {{brother.profession }}</p>
+                    <p class="card-text">Age : {{brother.age }}</p>
+                    <p class="card-text">Sex : {{brother.sex }}</p>
+                </div>
+            <div class="card-footer bg-transparent border-dark">
+            </div>
+            </div>
+        </div>
+        <div class="daughter">
+            <div class="card border-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header">Link : {{daughter.link}}</div>
+                    <div class="card-body">
+                        <h5 class="card-title">First Name : {{daughter.first_name }}</h5>
+                            <p class="card-text">Last Name : {{daughter.last_name }}</p>
+                            <p class="card-text">Phone : {{daughter.phone }}</p>
+                            <p class="card-text">Email : {{daughter.email }}</p>
+                            <p class="card-text">Phone : {{daughter.address }}</p>
+                            <p class="card-text">Profession : {{daughter.profession }}</p>
+                            <p class="card-text">Age : {{daughter.age }}</p>
+                            <p class="card-text">Sex : {{daughter.sex }}</p>
+                        </div>
+                    <div class="card-footer bg-transparent border-dark">
+                </div>
+            </div>
+        </div>
+        <div class="son">
+             <div class="card border-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header">Link : {{son.link}}</div>
+                <div class="card-body">
+                    <h5 class="card-title">First Name : {{son.first_name }}</h5>
+                    <p class="card-text">Last Name : {{son.last_name }}</p>
+                    <p class="card-text">Phone : {{son.phone }}</p>
+                    <p class="card-text">Email : {{son.email }}</p>
+                    <p class="card-text">Phone : {{son.address }}</p>
+                    <p class="card-text">Profession : {{son.profession }}</p>
+                    <p class="card-text">Age : {{son.age }}</p>
+                    <p class="card-text">Sex : {{son.sex }}</p>
+                </div>
+                <div class="card-footer bg-transparent border-dark">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+{% endblock %}

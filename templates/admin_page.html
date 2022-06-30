@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Page</title>
+</head>
+<body>
+<div class="container-admin">
+    <h1>Welcome to the admin page</h1>
+    <div class="new-profile">
+          <a href="{% url 'create' %}">+ New Profile</a>
+    </div>
+    {% for profile in object_list %}
+    <div class="card border-dark mb-3" id="card" style="max-width: 23rem;">
+        <div class="card-header">Nom : {{profile.user.username }}</div>
+        <div class="card-body">
+            <h5 class="card-title">Profession : {{profile.profession }}</h5>
+            <p class="card-text">Adresse : {{profile.address }}</p>
+            <p class="card-text">Age : {{profile.age }} ans</p>
+        </div>
+        <div class="card-footer bg-transparent border-dark">
+            <a href="{% url 'details' profile.id %}">Details</a>
+        </div>
+    </div>
+        {% endfor %}
+</div>
+</body>
+</html>
+{% endblock %}

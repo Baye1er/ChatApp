@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details Profile</title>
+</head>
+<body>
+<div class="card">
+    <div class="card-header">
+        <span class="font-weight-bold">Nom : {{ object.user.username }}</span> &middot;
+    </div>
+    <div class="card-body">
+        <span class="text-muted">Adresse : {{ object.address }} | Profession : {{ object.profession }}</span>
+        <p>Age : {{ object.age }}</p>
+         <p>Phone : {{ object.phone }}</p>
+         <p>Sex : {{ object.sex }}</p>
+    </div>
+    <div class="card-footer text-center text-muted">
+        <p>
+            <a href="{% url 'update' object.pk %}">Edit</a> |
+            <a href="{% url 'delete' object.id %}">Delete</a>
+        </p>
+        <p>
+            Back to <a href="{% url 'admin_page' %}">All Profile</a>
+        </p>
+    </div>
+</div>
+</body>
+</html>
+{% endblock %}

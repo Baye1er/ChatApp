@@ -1,0 +1,190 @@
+/*base.html*/
+*{
+box-sizing: border-box;
+background-color : transparent;
+}
+
+#nav{
+background-color: blue;
+}
+
+.navbar-brand{
+font-size: 1.9rem;
+font-weight: bold;
+}
+
+.footer{
+display: flex;
+height:120px;
+width: 100%;
+align-items: center;
+justify-content: center;
+position: relative;
+top: 615px;
+background-color: #b0c4de;
+}
+/*Sign In*/
+h3, h2, h1{
+text-align: center;
+}
+.container{
+position: relative;
+top: 80px;
+background-color: whitesmoke;
+}
+/*admin-page*/
+.container-admin{
+margin-top: 100px;
+background-color: whitesmoke;
+}
+
+#card{
+margin-left: 30px;
+}
+
+.new-profile{
+float: right;
+margin-right: 30px;
+}
+
+/*details*/
+.card{
+margin-top: 100px;
+background-color: whitesmoke;
+}
+
+/*Update Profile*/
+.container-update, .container-delete, .container-create, .container-extend{
+position: relative;
+top: 100px;
+margin: 60px;
+background-color: whitesmoke;
+}
+
+/*delete profile*/
+#delete{
+color: red;
+}
+#input{
+border-radius: 3px;
+border: 1px solid #dc143c;
+background-color: #dc143c;
+color: #fff;
+}
+
+/*profile page*/
+.container-profile-page{
+position: relative;
+top: 100px;
+margin: 60px;
+background-color: whitesmoke;
+}
+
+.new-relative{
+display: flex;
+max-width: auto;
+height: 50px;
+border-radius: 6px;
+border: 1px solid black;
+align-items: center;
+justify-content: center;
+}
+
+.spaces{
+display: flex;
+width: 70px;
+height: 50px;
+border-radius: 6px;
+border: 1px solid black;
+align-items: center;
+justify-content: center;
+}
+
+.btns{
+display: flex;
+float: right;
+margin: 30px;
+flex-direction: column;
+height:110px;
+width: 120px;
+justify-content: space-between;
+}
+
+.container-new-relative{
+position: relative;
+top: 100px;
+margin: 60px;
+background-color: whitesmoke;
+}
+
+
+/*Family tree*/
+
+.family-tree{
+display: flex;
+flex-wrap: wrap;
+align-content: space-between;
+height: 1400px;
+width: 1600px;
+margin-left: 90px;
+margin-top: 80px;
+background-color: whitesmoke;
+}
+
+.mother{
+position: relative;
+top: 5px;
+margin-left: 600px;
+}
+
+.sister{
+position: absolute;
+top: 660px;
+margin-left: 100px;
+}
+
+.me{
+position: absolute;
+top: 820px;
+margin-left: 650px;
+}
+
+.brother {
+position: absolute;
+top: 660px;
+margin-left: 1130px;
+}
+
+.daughter{
+position: absolute;
+top: 1130px;
+margin-left: 400px;;
+}
+
+.son{
+position: absolute;
+top: 1130px;
+margin-left: 800px;;
+}
+
+
+/*End Family tree*/
+
+/*spaces*/
+.container-chatting-page{
+margin-top: 100px;
+margin-left: 50px;
+background-color: whitesmoke;
+}
+
+/* space */
+.chat-room{
+margin-top: 50px;
+height: 55rem;
+background-color: #0D9488;
+}
+
+.chat-messages{
+height: 400px;
+overflow-y: auto;
+}
