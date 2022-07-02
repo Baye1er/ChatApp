@@ -8,6 +8,9 @@
 </head>
 <body>
 <div class="container-delete">
+    <div class="spaces">
+        <a href="{% url 'details' object.id %}">Back</a>
+    </div>
     <h1>Delete Profile</h1>
     <form action="" method="post">
         {% csrf_token %}

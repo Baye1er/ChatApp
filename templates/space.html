@@ -41,7 +41,7 @@
 
 {% block scripts %}
 {{ space.slug|json_script:"json-roomname" }}
-{{ space.slug|json_script:"json-username" }}
+{{ request.user.username|json_script:"json-username" }}
 
 <script src="{% static 'index.js' %}"></script>
 {% endblock %}

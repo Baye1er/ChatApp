@@ -17,7 +17,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
 
         await self.accept()
 
-    async def disconnect(self):
+    async def disconnect(self, channel_layer):# adding 'channel_layer'
         await self.channel_layer.group_discard(
             self.space_group_name,
             self.channel_name
@@ -54,8 +54,8 @@ class ChatConsumer(AsyncWebsocketConsumer):
 
     @sync_to_async
     def save_message(self, space, username, message):
-        user = User.objects.get(username=username).id
-        space = Space.objects.get(slug=space).id
+        user = User.objects.get(username=username)
+        space = Space.objects.get(slug=space)
 
         Message.objects.create(space=space, user=user, content=message)
 

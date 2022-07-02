@@ -10,6 +10,9 @@
 <body>
 <div class="container-chatting-page">
     <h1>Welcome to your spaces !</h1>
+    <div class="spaces">
+        <a href="{% url 'profile_page' %}">Back</a>
+    </div>
     {% for space in spaces %}
      <div class="card border-dark mb-3" id="card" style="max-width: 12rem;">
         <div class="card-header">Spaces</div>
